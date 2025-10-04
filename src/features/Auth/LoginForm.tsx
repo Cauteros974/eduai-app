@@ -25,4 +25,14 @@ export const LoginForm = () => {
             console.error('Login Error', error);
         }
     };
+
+    return (
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <input type="email" {...register('email')} placeholder="Email"/>
+            {errors.email && <p>{errors.email.message}</p>}
+
+            <input type="password" {...register('password')} placeholder="Password"/>
+            {errors.password && <p>{errors.password.message}</p>}
+        </form>
+    )
 }
