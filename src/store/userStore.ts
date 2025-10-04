@@ -1,9 +1,9 @@
 import { create } from 'zustand';
 
 interface User {
-    id: string, 
-    email: string,
-    name: string,
+    id: string;
+    email: string;
+    name: string;
 }
 
 interface UserState {
@@ -15,5 +15,9 @@ interface UserState {
 }
 
 export const useUserStore = create<UserState>((set) => ({
-    
-}))
+    user: null,
+    token: null,
+    isLoading: true,
+    login: (userData, token) => set({ user: userData, token, isLoading: false }),
+    logout: () => set({ user: null, token: null, isLoading: false }),
+}));
