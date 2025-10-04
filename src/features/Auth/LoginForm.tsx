@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { email, z } from 'zod';
+import { z } from 'zod';
 import { useUserStore } from '../../store/userStore';
 import { loginUser } from '../../services/authService';
 
@@ -33,6 +33,8 @@ export const LoginForm = () => {
 
             <input type="password" {...register('password')} placeholder="Password"/>
             {errors.password && <p>{errors.password.message}</p>}
+
+            <button type="submit">LogIn</button>
         </form>
-    )
-}
+    );
+};
