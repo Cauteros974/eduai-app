@@ -8,4 +8,8 @@ const buttonStyle: React.CSSProperties = {
     border: 'none',
     borderRadius: 'var(--border-radius)',
     backgroundColor: 'var(--primary-color)',
+    color: 'white',
+    cursor: 'pointer',
+    outline: 'none',
+    width: '100%',
 };
