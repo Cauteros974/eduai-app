@@ -29,5 +29,5 @@ export const Button = ({ children, ...props }: ButtonProps) => {
         >
             {children}
         </motion.button>
-    )
-}
+    );
+};
