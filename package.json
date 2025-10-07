@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@alpinejs/persist": "^3.15.0",
     "@hookform/resolvers": "^5.2.2",
     "axios": "^1.12.2",
     "framer-motion": "^12.23.22",
