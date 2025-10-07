@@ -5,4 +5,7 @@ const buttonStyle: React.CSSProperties = {
     padding: '10px 20px',
     fontSize: '16px',
     fontWeight: 500,
+    border: 'none',
+    borderRadius: 'var(--border-radius)',
+    backgroundColor: 'var(--primary-color)',
 };
