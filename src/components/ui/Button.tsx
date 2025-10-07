@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React, { Children } from 'react';
+import React from 'react';
 
 const buttonStyle: React.CSSProperties = {
     padding: '10px 20px',
