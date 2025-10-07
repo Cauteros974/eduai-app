@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { LoginPage } from './pages/LoginPage';
+/*import { LoginPage } from './pages/LoginPage';
 import { HomePage } from './pages/HomePage';
-import { CoursePage } from './pages/CoursePage';
+import { CoursePage } from './pages/CoursePage';*/
 import { useUserStore } from './store/userStore';
 
 const PrivateRoute = ({ children }: { children: JSX.Element }) => {
