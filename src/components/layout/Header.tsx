@@ -32,4 +32,16 @@ export const Header = () => {
         logout();
         navigate("/login");
     };
-}
+
+    return (
+        <header style={headerStyle}>
+            <Link to="/" style={logoStyle}>EduAI</Link>
+            {user && (
+                <nav style={navStyle}>
+                    <span>Hello, {user.name}!</span>
+                    <button onClick={handleLogout} style={{background: 'none', border: 'none', color: 'var(--primary-color)', cursor: 'pointer', fontSize: '16px'}}>LogOut</button>
+        </nav>
+      )}
+        </header>
+    );
+};
