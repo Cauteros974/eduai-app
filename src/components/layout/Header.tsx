@@ -11,3 +11,15 @@ const headerStyle: React.CSSProperties = {
     justifyContent: 'space-between',
     padding: '0 40px',
 };
+
+const logoStyle: React.CSSProperties = {
+    fontWeight: 'bold',
+    fontSize: '24px',
+    color: 'var(--primary-color)',
+};
+
+const navStyle: React.CSSProperties = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '20px',
+};
