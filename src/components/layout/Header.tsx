@@ -23,3 +23,13 @@ const navStyle: React.CSSProperties = {
     alignItems: 'center',
     gap: '20px',
 };
+
+export const Header = () => {
+    const { user, logout } = useUserStore();
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        logout();
+        navigate("/");
+    };
+}
