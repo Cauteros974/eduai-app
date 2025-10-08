@@ -2,7 +2,9 @@ import { useForm, type SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useUserStore } from '../../store/userStore';
-import { loginUser } from '../../services/authService';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '../../components/ui/Button';
+import { Input } from '../../components/ui/Input';
 
 const loginSchema = z.object({
     email: z.string().email('Invalid email format'),
@@ -15,12 +17,12 @@ export const LoginForm = () => {
     const { register, handleSubmit, formState: { errors }} = useForm<LoginFormData>({
         resolver: zodResolver(loginSchema),
     });
-    const login = useUserStore((state) => state.login);
+    const loginAction = useUserStore((state) => state.login);
+    const navigate = useNavigate();
 
     const onSubmit: SubmitHandler<LoginFormData> = async (data) => {
         try{
-            const response = await loginUser(data);
-            login(response.user, response.token);
+            
         } catch(error) {
             console.error('Login Error', error);
         }
