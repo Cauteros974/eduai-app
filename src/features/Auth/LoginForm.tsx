@@ -22,7 +22,11 @@ export const LoginForm = () => {
 
     const onSubmit: SubmitHandler<LoginFormData> = async (data) => {
         try{
-            
+            console.log('Sending data', data);
+            const mockResponse = {
+                user: { id: '1', email: data.email, name: 'Student' },
+                token: 'fake-jwt-token',
+            }
         } catch(error) {
             console.error('Login Error', error);
         }
