@@ -17,7 +17,7 @@ const MainLayout = () => (
 const PrivateRoute = () => {
   const user = useUserStore((state) => state.user);
   return user ? <MainLayout /> : <Navigate to="/login" />
-}
+};
 
 function App() {
   return (
