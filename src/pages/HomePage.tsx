@@ -3,9 +3,10 @@ import { CourseCard } from "../features/Course/CourseCard";
 import styles from './HomePage.module.css';
 
 const mockCourses = [
-    { id: 1, title: 'Introduction to React', description: 'Basics of modern web development.', imageUrl: 'https://placehold.co/600x400/6366f1/FFF?text=React'},
-    { id: 2, title: 'TypeScript for professionals', description: 'Learn static typing.', imageUrl: 'https://placehold.co/600x400/3498db/FFF?text=TS'},
-    { id: 3, title: 'Node.js and Express', description: 'Creation of powerful backend services.', imageUrl: 'https://placehold.co/600x400/2ecc71/FFF?text=Node'},
+    { id: 1, title: 'Introduction to React', description: 'Basics of modern web development.', imageUrl: "/images/react.png"},
+    { id: 2, title: 'TypeScript for professionals', description: 'Learn static typing.', imageUrl: '/images/Typescript.png'},
+    { id: 3, title: 'Node.js and Express', description: 'Creation of powerful backend services.', imageUrl: '/images/Node.js.png'},
+    { id: 4, title: 'Angular', description: 'Build modern apps', imageUrl: '/images/Angular_gradient.png'},
 ];
 
 const gridStyle: React.CSSProperties = {
