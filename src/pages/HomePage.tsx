@@ -15,7 +15,7 @@ const gridStyle: React.CSSProperties = {
 export const HomePage = () => {
     return (
       <>
-        <h1 style={{ marginBottom: '32px' }}>Доступные курсы</h1>
+        <h1 style={{ marginBottom: '32px' }}>Available courses</h1>
         <div style={gridStyle}>
           {mockCourses.map((course) => (
             <CourseCard

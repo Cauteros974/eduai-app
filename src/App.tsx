@@ -19,6 +19,19 @@ const PrivateRoute = () => {
   return user ? <MainLayout /> : <Navigate to="/login" />
 };
 
-
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+       
+        <Route element={<PrivateRoute />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/course/:courseId" element={<CoursePage />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
+}
 
 export default App;
