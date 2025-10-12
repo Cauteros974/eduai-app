@@ -26,12 +26,14 @@ interface CourseCardProps {
     onClick: () => void;
 }
 
-export const CourseCard = ({ title, description, imageUrl }: CourseCardProps) => {
+export const CourseCard = ({ title, description, imageUrl, onClick }: CourseCardProps) => {
     return (
       <motion.div
         style={cardStyle}
         whileHover={{ y: -5, boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)' }}
         transition={{ duration: 0.2 }}
+        onClick={onClick}
+        whileTap={{ scale: 0.98 }}
       >
         <img src={imageUrl} alt={title} style={imageStyle} />
         <div style={contentStyle}>
@@ -41,4 +43,3 @@ export const CourseCard = ({ title, description, imageUrl }: CourseCardProps) =>
       </motion.div>
     );
 };
-  

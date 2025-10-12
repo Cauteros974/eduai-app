@@ -17,6 +17,7 @@ export const HomePage = () => {
     const navigate = useNavigate();
 
     const handleCourseClick = ( courseId: number) => {
+        console.log('Click! I am trying to switch to a course with ID:', courseId);
         navigate(`/course/${courseId}`)
     };
 
