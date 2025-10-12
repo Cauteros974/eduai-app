@@ -45,7 +45,7 @@ export const LoginForm = () => {
         <Input type="password" {...register('password')} placeholder="Пароль" />
         {errors.password && <p style={{ color: 'red', margin: '5px 0 0' }}>{errors.password.message}</p>}
       </div>
-      <Button type="submit">LogOut</Button>
+      <Button type="submit">LogIn</Button>
     </form>
   );
 };

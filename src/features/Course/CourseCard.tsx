@@ -23,6 +23,7 @@ interface CourseCardProps {
     title: string;
     description: string;
     imageUrl: string;
+    onClick: () => void;
 }
 
 export const CourseCard = ({ title, description, imageUrl }: CourseCardProps) => {
