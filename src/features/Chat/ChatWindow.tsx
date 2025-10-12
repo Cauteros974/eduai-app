@@ -1,37 +1,37 @@
-import { useState } from "react";
-import {motion, AnimatePresence } from 'framer-motion';
-import { Button } from "../../components/ui/Button";
-import { Input } from "../../components/ui/Input";
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Button } from '../../components/ui/Button';
+import { Input } from '../../components/ui/Input';
 
 interface Message {
-    sender: 'user' | 'ai';
-    text: string;
+  sender: 'user' | 'ai';
+  text: string;
 }
 
 export const ChatWindow = ({ lessonContext }: { lessonContext: string }) => {
-    const [ message, setMessage ] = useState<Message[]>([]);
-    const [ input, setInput ] = useState('');
-    const [ isLoading, setIsLoading ] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
-    const handleSendMessage = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if (!input.trim()) return;
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim()) return;
 
-        const userMessage: Message = { sender: 'user', text: 'input'};
-        setMessages((prev) => [...prev, userMessage]);
-        setInput('');
-        setIsLoading(true);
+    const userMessage: Message = { sender: 'user', text: input };
+    setMessages((prev) => [...prev, userMessage]);
+    setInput('');
+    setIsLoading(true);
+    
+    setTimeout(() => {
+      const aiResponse = `This is AI's answer to your question "${userMessage.text}" in the context: "${lessonContext.substring(0, 30)}...".`;
+      const aiMessage: Message = { sender: 'ai', text: aiResponse };
+      setMessages((prev) => [...prev, aiMessage]);
+      setIsLoading(false);
+    }, 1500);
+  };
 
-        setTimeout(() => {
-            const aiResponse = `This is AI's answer to your question "${userMessage.text}" in the context: "${lessonContext.substring(0, 30)}...".`;
-            const aiMessage: Message = { sender: 'ai', text: aiResponse};
-            setMessages((prev) => [..prev, aiMessage]);
-            setLoading(false);
-        }, 1500);
-    };
-
-    return(
-        <div style={{ display: 'flex', flexDirection: 'column', height: '100%', border: '1px solid var(--border-color)', borderRadius: 'var(--border-radius)', background: '#fff' }}>
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', border: '1px solid var(--border-color)', borderRadius: 'var(--border-radius)', background: '#fff' }}>
       <div style={{ padding: '10px', borderBottom: '1px solid var(--border-color)', fontWeight: 500 }}>AI-Тьютор</div>
       <div style={{ flex: 1, padding: '10px', overflowY: 'auto' }}>
         <AnimatePresence>
@@ -58,7 +58,7 @@ export const ChatWindow = ({ lessonContext }: { lessonContext: string }) => {
             </motion.div>
           ))}
         </AnimatePresence>
-        {isLoading && <div style={{textAlign: 'center', color: '#6b7280'}}>The tutor thinks...</div>}
+        {isLoading && <div style={{textAlign: 'center', color: '#6b7280'}}>Тьютор думает...</div>}
       </div>
       <form onSubmit={handleSendMessage} style={{ display: 'flex', padding: '10px', gap: '10px' }}>
         <Input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Ask something..." />
@@ -67,5 +67,5 @@ export const ChatWindow = ({ lessonContext }: { lessonContext: string }) => {
         </div>
       </form>
     </div>
-    )
+  );
 };
