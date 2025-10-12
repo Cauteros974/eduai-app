@@ -25,5 +25,19 @@ interface CourseCardProps {
     imageUrl: string;
 }
 
-
+export const CourseCard = ({ title, description, imageUrl }: CourseCardProps) => {
+    return (
+      <motion.div
+        style={cardStyle}
+        whileHover={{ y: -5, boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)' }}
+        transition={{ duration: 0.2 }}
+      >
+        <img src={imageUrl} alt={title} style={imageStyle} />
+        <div style={contentStyle}>
+          <h3 style={{ marginTop: 0, marginBottom: '10px' }}>{title}</h3>
+          <p style={{ margin: 0, color: '#6b7280' }}>{description}</p>
+        </div>
+      </motion.div>
+    );
+};
   
