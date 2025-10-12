@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { CourseCard } from "../features/Course/CourseCard";
+import styles from './HomePage.module.css';
 
 const mockCourses = [
     { id: 1, title: 'Introduction to React', description: 'Basics of modern web development.', imageUrl: 'https://placehold.co/600x400/6366f1/FFF?text=React'},
