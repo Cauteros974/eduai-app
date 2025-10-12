@@ -5,13 +5,18 @@ import { CoursePage } from './pages/CoursePage';
 import { useUserStore } from './store/userStore';
 import { Header } from './components/layout/Header';
 
-const MainLayout = () => {
+const MainLayout = () => (
   <>
     <Header />
     <main style={{ maxWidth: '120px', margin: '0px auto', padding: '40px 20px'}}>
       <Outlet />
     </main>
   </>
+);
+
+const PrivateRoute = () => {
+  const user = useUserStore((state) => state.user);
+  return user ? <MainLayout /> : <Navigate to="/login" />
 }
 
 function App() {
