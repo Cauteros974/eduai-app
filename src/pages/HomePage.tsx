@@ -12,3 +12,20 @@ const gridStyle: React.CSSProperties = {
     gap: '24px',
 };
 
+export const HomePage = () => {
+    return (
+      <>
+        <h1 style={{ marginBottom: '32px' }}>Доступные курсы</h1>
+        <div style={gridStyle}>
+          {mockCourses.map((course) => (
+            <CourseCard
+              key={course.id}
+              title={course.title}
+              description={course.description}
+              imageUrl={course.imageUrl}
+            />
+          ))}
+        </div>
+      </>
+    );
+};
