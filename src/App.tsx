@@ -1,13 +1,18 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import { LoginPage } from './pages/LoginPage';
 import { HomePage } from './pages/HomePage';
 import { CoursePage } from './pages/CoursePage';
 import { useUserStore } from './store/userStore';
+import { Header } from './components/layout/Header';
 
-const PrivateRoute = ({ children }: { children: JSX.Element }) => {
-  const user = useUserStore((state) => state.user);
-  return user ? children : <Navigate to="/login" />;
-};
+const MainLayout = () => {
+  <>
+    <Header />
+    <main style={{ maxWidth: '120px', margin: '0px auto', padding: '40px 20px'}}>
+      <Outlet />
+    </main>
+  </>
+}
 
 function App() {
   return (
