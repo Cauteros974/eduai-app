@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { CourseCard } from "../features/Course/CourseCard";
 
 const mockCourses = [
@@ -13,6 +14,12 @@ const gridStyle: React.CSSProperties = {
 };
 
 export const HomePage = () => {
+    const navigate = useNavigate();
+
+    const handleCourseClick = ( courseId: number) => {
+        navigate(`/course/${courseId}`)
+    };
+
     return (
       <>
         <h1 style={{ marginBottom: '32px' }}>Available courses</h1>
@@ -23,6 +30,7 @@ export const HomePage = () => {
               title={course.title}
               description={course.description}
               imageUrl={course.imageUrl}
+              onClick={() => handleCourseClick(course.id)}
             />
           ))}
         </div>
