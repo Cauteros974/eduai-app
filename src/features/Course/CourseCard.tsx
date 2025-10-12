@@ -18,4 +18,12 @@ const imageStyle: React.CSSProperties = {
 const contentStyle: React.CSSProperties = {
     padding: '20px',
 };
+
+interface CourseCardProps {
+    title: string;
+    description: string;
+    imageUrl: string;
+}
+
+
   
