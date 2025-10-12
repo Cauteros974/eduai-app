@@ -19,30 +19,6 @@ const PrivateRoute = () => {
   return user ? <MainLayout /> : <Navigate to="/login" />
 };
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route
-          path="/"
-          element={
-            <PrivateRoute>
-              <HomePage />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/course/:courseId"
-          element={
-            <PrivateRoute>
-              <CoursePage />
-            </PrivateRoute>
-          }
-        />
-      </Routes>
-    </Router>
-  );
-}
+
 
 export default App;
