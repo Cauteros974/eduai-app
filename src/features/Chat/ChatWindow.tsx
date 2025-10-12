@@ -18,5 +18,8 @@ export const ChatWindow = ({ lessonContext }: { lessonContext: string }) => {
         if (!input.trim()) return;
 
         const userMessage: Message = { sender: 'user', text: 'input'};
+        setMessages((prev) => [...prev, userMessage]);
+        setInput('');
+        setIsLoading(true);
     }
 }
