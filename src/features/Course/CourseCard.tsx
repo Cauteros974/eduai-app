@@ -14,4 +14,8 @@ const imageStyle: React.CSSProperties = {
     height: '160px',
     objectFit: 'cover',
 };
+
+const contentStyle: React.CSSProperties = {
+    padding: '20px',
+};
   
