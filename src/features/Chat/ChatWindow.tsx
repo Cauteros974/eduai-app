@@ -21,5 +21,12 @@ export const ChatWindow = ({ lessonContext }: { lessonContext: string }) => {
         setMessages((prev) => [...prev, userMessage]);
         setInput('');
         setIsLoading(true);
-    }
+
+        setTimeout(() => {
+            const aiResponse = `This is AI's answer to your question "${userMessage.text}" in the context: "${lessonContext.substring(0, 30)}...".`;
+            const aiMessage: Message = { sender: 'ai', text: aiResponse};
+            setMessages((prev) => [..prev, aiMessage]);
+            setLoading(false);
+        }, 1500);
+    };
 }
