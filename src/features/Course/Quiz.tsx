@@ -44,7 +44,7 @@ const quizData = [
 export const Quiz = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
-    const [isFinished, setIsFinished] = useState(0);
+    const [isFinished, setIsFinished] = useState(false);
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = (data: any) => {
