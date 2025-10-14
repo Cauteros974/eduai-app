@@ -61,4 +61,13 @@ export const Quiz = () => {
             setIsFinished(true);
         }
     };
+
+    if (isFinished){
+        return (
+            <div className={styles.quiz}>
+                <h2>Quiz Ended</h2>
+                <p>Your score: {score} of {quizData.length}</p>
+            </div>
+        )
+    }
 }
