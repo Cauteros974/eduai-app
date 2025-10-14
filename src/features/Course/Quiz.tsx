@@ -46,4 +46,11 @@ export const Quiz = () => {
     const [score, setScore] = useState(0);
     const [isFinished, setIsFinished] = useState(0);
     const { register, handleSubmit, reset } = useForm();
+
+    const onSubmit = (data: any) => {
+        const userAnswerIndex = parseInt(data.answer, 10);
+        if (userAnswerIndex === quizData[currentQuestion].correctAnswer) {
+            
+        }
+    }
 }
