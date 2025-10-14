@@ -1,5 +1,8 @@
 .styles.layout{
-    width: 400px;
+    display: 'grid';
+    gridTemplateColumns: '2fr 1fr';
+    gap: '30px';
+    height: 'calc(100vh - var(--header-height) - 80px)';
 }
 
 .layout {
