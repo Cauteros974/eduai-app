@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Button } from "../../components/ui/Button";
 import  styles from './Quiz.module.css';    
 
-const QuizData = [
+const quizData = [
     {
         question: "What is React?",
         options: ["Framework", "Library", "Programming Language"],
