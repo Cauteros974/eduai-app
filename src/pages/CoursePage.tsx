@@ -1,5 +1,5 @@
 import { ChatWindow } from "../features/Chat/ChatWindow";
-
+import styles from './CoursePage.module.css';
 
 const lessonContext = `React is a JavaScript library for creating user interfaces. 
 It uses a component approach that allows you to break complex UIs into isolated, reusable parts. 
@@ -16,6 +16,7 @@ const layoutStyle: React.CSSProperties = {
 export const CoursePage = () => {
     return(
         <div>
+            <div className={styles.page}>
             <h1>Introduction to React: Basic concepts</h1>
             <div style={layoutStyle}>
                 <div className="lesson-content">
@@ -29,6 +30,7 @@ export const CoursePage = () => {
                 <div className="chat-area">
                     <ChatWindow lessonContext={lessonContext} />
                 </div>
+            </div>
             </div>
         </div>
     );
