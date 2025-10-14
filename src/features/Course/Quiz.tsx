@@ -34,4 +34,9 @@ const QuizData = [
         options: ["Changes state", "Optimizes rendering", "Performs side effects", "Stores data"],
         correctAnswer: 3,
     },
+    {
+        questions: "What is JSX?",
+        options: ["A programming language", "A JavaScript extension that allows you to write HTML-like code", "A CSS preprocessor", "A JSON format"],
+        correctAnswer: 2,
+    }
 ]
