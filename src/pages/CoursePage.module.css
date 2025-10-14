@@ -1,7 +1,24 @@
+.styles.layout{
+    width: 400px;
+}
+
 .layout {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 120px;
+}
+
+.layout p {
+    width: 500px;
+    display:grid;
+}
+
+.lesson-content .p {
+    width: 1px;
+}
+
+.chat-area{
+    width: 200px;
 }
 
 @media (max-width: 768px) {
