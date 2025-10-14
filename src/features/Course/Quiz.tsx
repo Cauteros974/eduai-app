@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "../../components/ui/Button";
-import { style } from './Quiz.module.css';
+import  styles from './Quiz.module.css';    
 
 const QuizData = [
     {
@@ -38,5 +38,12 @@ const QuizData = [
         questions: "What is JSX?",
         options: ["A programming language", "A JavaScript extension that allows you to write HTML-like code", "A CSS preprocessor", "A JSON format"],
         correctAnswer: 2,
-    }
-]
+    },
+];
+
+export const Quiz = () => {
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [score, setScore] = useState(0);
+    const [isFinished, setIsFinished] = useState(0);
+    const { register, handleSubmit, reset } = useForm();
+}
