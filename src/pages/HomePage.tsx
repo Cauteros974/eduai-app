@@ -25,6 +25,7 @@ export const HomePage = () => {
 
     return (
       <>
+      <div className={styles.page}>
         <h1 style={{ marginBottom: '32px' }}>Available courses</h1>
         <div style={gridStyle}>
           {mockCourses.map((course) => (
@@ -37,6 +38,7 @@ export const HomePage = () => {
             />
           ))}
         </div>
+      </div>
       </>
     );
 };
