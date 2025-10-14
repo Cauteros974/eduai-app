@@ -16,22 +16,21 @@ const layoutStyle: React.CSSProperties = {
 export const CoursePage = () => {
     return(
         <div>
-            <div className={styles.page}>
-            <h1>Introduction to React: Basic concepts</h1>
-            <div style={layoutStyle}>
+            <div className={styles.layout}>
                 <div className="lesson-content">
+                <h1>Introduction to React: Basic concepts</h1>
                     <h2>What React is it?</h2>
                     <p>{lessonContext}</p>
                     <p>JSX is a syntax extension for JavaScript that allows you to write 
                         HTML-like code directly in JavaScript. This makes the code more readable and 
                         convenient for development.
                     </p>
+                </div>        
                 </div>
+            
                 <div className="chat-area">
                     <ChatWindow lessonContext={lessonContext} />
                 </div>
             </div>
-            </div>
-        </div>
     );
 };
