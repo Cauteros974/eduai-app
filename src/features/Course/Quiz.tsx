@@ -68,6 +68,22 @@ export const Quiz = () => {
                 <h2>Quiz Ended</h2>
                 <p>Your score: {score} of {quizData.length}</p>
             </div>
-        )
+        );
     }
+
+    const question = quizData[currentQuestion];
+
+    return (
+        <div className={styles.quiz}>
+          <h2>Квиз: {question.question}</h2>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            {question.options.map((option, index) => (
+              <div key={index} className={styles.option}>
+                <input type="radio" id={`option-${index}`} value={index} {...register('answer', { required: true })} />
+                <label htmlFor={`option-${index}`}>{option}</label>
+              </div>
+            ))}
+          </form>
+        </div>
+    );
 }
