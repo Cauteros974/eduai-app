@@ -50,7 +50,7 @@ export const Quiz = () => {
     const onSubmit = (data: any) => {
         const userAnswerIndex = parseInt(data.answer, 10);
         if (userAnswerIndex === quizData[currentQuestion].correctAnswer) {
-            
+            setScore(score + 1);
         }
     }
 }
