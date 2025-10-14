@@ -52,5 +52,13 @@ export const Quiz = () => {
         if (userAnswerIndex === quizData[currentQuestion].correctAnswer) {
             setScore(score + 1);
         }
-    }
+
+        reset();
+
+        if (currentQuestion < quizData.length - 1) {
+            setCurrentQuestion(currentQuestion + 1);
+        } else{
+            setIsFinished(true);
+        }
+    };
 }
