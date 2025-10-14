@@ -1,4 +1,5 @@
 import { ChatWindow } from "../features/Chat/ChatWindow";
+import style from './CoursePage.module.css';
 
 const lessonContext = `React is a JavaScript library for creating user interfaces. 
 It uses a component approach that allows you to break complex UIs into isolated, reusable parts. 
