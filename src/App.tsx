@@ -29,6 +29,7 @@ function App() {
         <Route element={<PrivateRoute />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/course/:courseId" element={<CoursePage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
       </Routes>
     </Router>
