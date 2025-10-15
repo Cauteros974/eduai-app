@@ -16,7 +16,11 @@ export const ProfilePage = () => {
                     <strong>Name</strong>
                     <span>{user.name}</span>
                 </div>
+                <div className={styles.field}>
+                    <strong>Email:</strong>
+                    <span>{user.email}</span>
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
