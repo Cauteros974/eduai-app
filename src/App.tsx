@@ -4,6 +4,7 @@ import { HomePage } from './pages/HomePage';
 import { CoursePage } from './pages/CoursePage';
 import { useUserStore } from './store/userStore';
 import { Header } from './components/layout/Header';
+import { ProfilePage } from './pages/ProfilePage';
 
 const MainLayout = () => (
   <>
