@@ -1,11 +1,24 @@
 .profilePage {
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
 }
-
 .card {
     background: var(--card-background);
-    padding: 30px;
+    padding: 40px;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.field {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.field:last-child {
+    border-bottom: none;
+}
+
+.field strong {
+    color: #6b7280;
 }
