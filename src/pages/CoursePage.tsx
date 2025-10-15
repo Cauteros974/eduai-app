@@ -36,6 +36,8 @@ export const CoursePage = () => {
                         <Button onClick={() => setShowQuiz(true)}>Take the test</Button>
                     </div>
                 )}
+                
+                    {showQuiz && <Quiz />}
                 </div>
             
                 <div className="chat-area">
