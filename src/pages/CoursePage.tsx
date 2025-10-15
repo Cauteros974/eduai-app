@@ -17,6 +17,8 @@ const layoutStyle: React.CSSProperties = {
 };
 
 export const CoursePage = () => {
+    const [ showQuiz, setShowQuiz ] = useState(false);
+
     return(
         <div>
             <div className={styles.layout}>
@@ -28,7 +30,12 @@ export const CoursePage = () => {
                         HTML-like code directly in JavaScript. This makes the code more readable and 
                         convenient for development.
                     </p>
-                </div>        
+                </div>
+                {!setShowQuiz && (
+                    <div style={{marginTop: '30px', width: '200px'}}>
+                        <Button onClick={() => setShowQuiz(true)}>Take the test</Button>
+                    </div>
+                )}
                 </div>
             
                 <div className="chat-area">
