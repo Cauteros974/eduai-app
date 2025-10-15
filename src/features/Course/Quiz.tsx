@@ -83,7 +83,7 @@ export const Quiz = () => {
                 <label htmlFor={`option-${index}`}>{option}</label>
               </div>
             ))}
-             <Button type="submit">Answe</Button>
+             <Button type="submit">Answer</Button>
           </form>
         </div>
     );
