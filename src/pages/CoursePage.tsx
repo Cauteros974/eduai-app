@@ -1,4 +1,7 @@
+import { useState } from "react";
 import { ChatWindow } from "../features/Chat/ChatWindow";
+import { Quiz } from "../features/Course/Quiz";
+import { Button } from "../components/ui/Button";
 import styles from './CoursePage.module.css';
 
 const lessonContext = `React is a JavaScript library for creating user interfaces. 
