@@ -38,7 +38,7 @@ export const Header = () => {
             <Link to="/" style={logoStyle}>EduAI</Link>
             {user && (
                 <nav style={navStyle}>
-                    <span>Hello, {user.name}!</span>
+                    <Link to="/profile" style={{color: '#333'}}>Hello {user.name}!</Link>
                     <button onClick={handleLogout} style={{background: 'none', border: 'none', color: 'var(--primary-color)', cursor: 'pointer', fontSize: '16px'}}>LogOut</button>
         </nav>
       )}
