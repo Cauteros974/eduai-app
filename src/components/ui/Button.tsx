@@ -2,7 +2,7 @@ import { motion, type HTMLMotionProps } from "framer-motion";
 import type { ReactNode } from "react";
 
 const buttonStyle: React.CSSProperties = {
-  padding: "10px 20px",
+  padding: "10px 22px",
   fontSize: "16px",
   fontWeight: 500,
   border: "none",
