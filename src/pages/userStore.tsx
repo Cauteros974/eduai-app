@@ -9,5 +9,7 @@ interface User {
 interface UserState {
     user: User | null;
     token: string | string;
-    
+    isLoading : boolean;
+    login: (userData: User, token: string) => void;
+    logout: () => void;
 }
