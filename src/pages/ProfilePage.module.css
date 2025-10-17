@@ -4,14 +4,16 @@
 }
 .card {
     background: var(--card-background);
-    padding: 30px;
+    padding: 50px;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
+
 .field {
     display: flex;
     justify-content: space-between;
     padding: 15px 0;
+    font-size: 17px;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -21,4 +23,5 @@
 
 .field strong {
     color: #6b7280;
+    padding: 0 10px;
 }
