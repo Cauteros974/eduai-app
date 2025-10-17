@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 const buttonStyle: React.CSSProperties = {
   padding: "10px 22px",
   fontSize: "16px",
-  fontWeight: 500,
+  fontWeight: '500',
   border: "none",
   borderRadius: "var(--border-radius)",
   backgroundColor: "var(--primary-color)",
