@@ -17,6 +17,7 @@ const imageStyle: React.CSSProperties = {
 
 const contentStyle: React.CSSProperties = {
     padding: '20px',
+    width: '110%',
 };
 
 interface CourseCardProps {
