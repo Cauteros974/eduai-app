@@ -36,7 +36,7 @@ export const ChatWindow = ({ lessonContext }: { lessonContext: string }) => {
         display: 'flex',
         flexDirection: 'column',
         height: '600px',
-        width: '100%',
+        width: '600%',
         maxWidth: '600px',
         margin: '0 auto',
         border: '1px solid var(--border-color)',
