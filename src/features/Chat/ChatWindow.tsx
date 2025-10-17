@@ -32,7 +32,7 @@ export const ChatWindow = ({ lessonContext }: { lessonContext: string }) => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%', border: '1px solid var(--border-color)', borderRadius: 'var(--border-radius)', background: '#fff' }}>
-      <div style={{ padding: '10px', borderBottom: '1px solid var(--border-color)', fontWeight: 500 }}>AI-Тьютор</div>
+      <div style={{ padding: '10px', borderBottom: '1px solid var(--border-color)', fontWeight: 500 }}>AI-Tutor</div>
       <div style={{ flex: 1, padding: '10px', overflowY: 'auto' }}>
         <AnimatePresence>
           {messages.map((msg, index) => (
@@ -58,7 +58,7 @@ export const ChatWindow = ({ lessonContext }: { lessonContext: string }) => {
             </motion.div>
           ))}
         </AnimatePresence>
-        {isLoading && <div style={{textAlign: 'center', color: '#6b7280'}}>Тьютор думает...</div>}
+        {isLoading && <div style={{textAlign: 'center', color: '#6b7280'}}>The tutor thinks...</div>}
       </div>
       <form onSubmit={handleSendMessage} style={{ display: 'flex', padding: '10px', gap: '10px' }}>
         <Input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Ask something..." />
