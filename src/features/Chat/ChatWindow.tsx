@@ -32,7 +32,7 @@ export const ChatWindow = ({ lessonContext }: { lessonContext: string }) => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%', border: '1px solid var(--border-color)', borderRadius: 'var(--border-radius)', background: '#fff' }}>
-      <div style={{ padding: '30px', borderBottom: '1px solid var(--border-color)', fontWeight: 500 }}>AI-Tutor</div>
+      <div style={{ padding: '30px', borderBottom: '1px solid var(--border-color)', fontWeight: 400 }}>AI-Tutor</div>
       <div style={{ flex: 1, padding: '10px', overflowY: 'auto' }}>
         <AnimatePresence>
           {messages.map((msg, index) => (
