@@ -24,7 +24,7 @@ export const LoginForm = () => {
     try {
       console.log('Sending data:', data);
       const mockResponse = {
-        user: { id: '1', email: data.email, name: 'Student' },
+        user: { id: '1', email: data.email, name: data.email },
         token: 'fake-jwt-token',
       };
       loginAction(mockResponse.user, mockResponse.token);

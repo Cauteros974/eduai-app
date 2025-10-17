@@ -75,7 +75,7 @@ export const Quiz = () => {
 
     return (
         <div className={styles.quiz}>
-          <h2>Квиз: {question.question}</h2>
+          <h2>Quiz: {question.question}</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             {question.options.map((option, index) => (
               <div key={index} className={styles.option}>
