@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { CourseCard } from "../features/Course/CourseCard";
-import styles from "./HomePage.module.css";
+import styles from './HomePage.module.css';
 
 const mockCourses = [
   { id: 1, title: "Introduction to React", description: "Basics of modern web development.", imageUrl: "/images/react.png" },
@@ -8,6 +8,7 @@ const mockCourses = [
   { id: 3, title: "Node.js and Express", description: "Creation of powerful backend services.", imageUrl: "/images/Node.js.png" },
   { id: 4, title: "Angular", description: "Build modern apps.", imageUrl: "/images/Angular_gradient.png" },
 ];
+
 
 export const HomePage = () => {
   const navigate = useNavigate();
