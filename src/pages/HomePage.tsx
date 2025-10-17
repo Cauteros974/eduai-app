@@ -9,7 +9,6 @@ const mockCourses = [
   { id: 4, title: "Angular", description: "Build modern apps.", imageUrl: "/images/Angular_gradient.png" },
 ];
 
-
 export const HomePage = () => {
   const navigate = useNavigate();
 
