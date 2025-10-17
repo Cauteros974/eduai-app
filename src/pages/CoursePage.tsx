@@ -32,7 +32,7 @@ export const CoursePage = () => {
                     </p>
                 </div>
                 {!showQuiz && (
-                    <div style={{marginTop: '30px', width: '200px', position: 'relative', right: '120px'}}>
+                    <div style={{marginTop: '20px', width: '150px', position: 'relative', right: '120px'}}>
                         <Button onClick={() => setShowQuiz(true)}>Take the test</Button>
                     </div>
                 )}
