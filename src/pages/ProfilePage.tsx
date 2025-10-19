@@ -10,7 +10,7 @@ export const ProfilePage = () => {
 
     return(
         <div className={styles.profilePage}>
-            <h1>User Profile</h1>
+            <h1 className="user">User Profile</h1>
             <div className={styles.card}>
                 <div className={styles.field}>
                     <strong>Name</strong>
